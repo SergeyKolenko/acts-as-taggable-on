@@ -227,7 +227,6 @@ module ActsAsTaggableOn::Taggable
         query.joins(joins.join(' '))
           .where(conditions.join(' AND '))
           .group(group)
-          .having(having)
           .order(order_by.join(', '))
           .readonly(false)
       end
